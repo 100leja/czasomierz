@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inceligentny Czasomierz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="global.min.css">
+	<meta name="theme-color" content="#222222">
+	<meta name="msapplication-navbutton-color" content="#222222">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+</head>
+<body>
+<div class="loading"></div>
+<main id="app" class="app">
+
+	<section id="home" class="home active">
+		<h1 class="title text-center">Inceligentny Czasomierz</h1>
+		<figure class="home__logo">
+			<img src="img/pepewizard.png" alt="wizard">
+		</figure>
+		<p class="home__desc text-center">
+		Witaj, podaj datę urodzenia a powiem Ci prawdę.
+		Ten czasomierz pokaże Ci ile dni, minut i sekund zostało ci do trzydziestki.
+		<p class="quote">Dla motywacji, dla zażenowania, dla spierdolenia.</p>
+		</p>
+		<div class="form-wrapper">
+			<h3 class="form__title text-center">Wybierz datę urodzenia</h3>
+			<form class="form" id="form-date">
+			<div class="select-wrapper">
+				<select name="day" id="day">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+					<option>26</option>
+					<option>27</option>
+					<option>28</option>
+					<option>29</option>
+					<option>30</option>
+					<option>31</option>
+				</select>
+				<select name="month" id="month">
+					<option value="0" data-days="31">styczeń</option>
+					<option value="1" data-days="29">luty</option>
+					<option value="2" data-days="31">marzec</option>
+					<option value="3" data-days="30">kwiecień</option>
+					<option value="4" data-days="31">maj</option>
+					<option value="5" data-days="30">czerwiec</option>
+					<option value="6" data-days="31">lipiec</option>
+					<option value="7" data-days="31">sierpień</option>
+					<option value="8" data-days="30">wrzesień</option>
+					<option value="9" data-days="31">pażdziernik</option>
+					<option value="10" data-days="30">listopad</option>
+					<option value="11" data-days="31">grudzień</option>
+				</select>
+				<select name="year" id="year">
+					<option>1988</option>
+					<option>1989</option>
+					<option>1990</option>
+					<option>1991</option>
+					<option>1992</option>
+					<option>1993</option>
+					<option>1994</option>
+					<option>1995</option>
+					<option>1996</option>
+					<option>1997</option>
+					<option>1998</option>
+					<option>1999</option>
+					<option>2000</option>
+					<option>2001</option>
+					<option>2002</option>
+					<option>2003</option>
+					<option>2004</option>
+					<option>2005</option>
+				</select>				
+			</div>
+				<button class="btn" id="validate">Wyślij</button>
+			</form>
+			</div>
+		</div>
+	</section>
+	<section id="result" class="result acxtive">
+	<div class="container">
+		<h2 class="text-center" id="result-title">Niebywałe!</h2>
+		<p class="container result__desc" id="result-desc">Prawie udało Ci się osiągnąć cel.</p>
+		<div class="timer" id="timer">
+			<div class="timer-box">
+				<div class="timer-box__value" id="r-days">14492</div>
+				<span class="timer-box__title">Dni</span>
+			</div>
+			<div class="timer-box">
+				<div class="timer-box__value" id="r-hours">14</div>
+				<span class="timer-box__title">Godzin</span>
+			</div>
+			<div class="timer-box">
+				<div class="timer-box__value" id="r-minutes">41</div>
+				<span class="timer-box__title">Minut</span>
+			</div>
+			<div class="timer-box">
+				<div class="timer-box__value" id="r-seconds">54</div>
+				<span class="timer-box__title">Sekund</span>
+			</div>
+		</div>
+
+ 		<div class="bar">
+			<div class="bar__img"><img src="img/py.png"></div>
+			<div class="bar__box">
+				<div class="bar__progress" style="width:30%" id="progress">
+					<span class="progress__val" id="progress-val">30%</span>
+				</div>
+			</div>
+			<div class="bar__img"><img src="img/pc.png"></div>
+		</div>
+
+		<div class="user-age">
+			<div class="user-age__val" id="age">32</div>
+			<div class="quote">Wiek</div>
+		</div>
+
+		<div id="wizard" class="wizard hidden">
+			<div class="container">
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/DiWxTLbHUgE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+
+	</div>
+	</section>
+</main>
+<script src="main.min.js"></script>
+</body>
+</html>
